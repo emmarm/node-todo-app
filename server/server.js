@@ -18,6 +18,16 @@ app.post('/todos', (req, res) => {
     .catch((err) => res.status(400).send(err));
 });
 
+app.get('/todos', (req, res) => {
+  Todo.find()
+    .then(() => {
+      res.send({ todos });
+    })
+    .catch((err) => {
+      res.status(400).send(err);
+    });
+})
+
 app.listen(3000, () => console.log('Server running on port 3000.'));
 
 module.exports = {

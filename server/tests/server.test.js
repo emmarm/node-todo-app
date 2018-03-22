@@ -36,7 +36,6 @@ describe('POST /todos', () => {
   });
 
   it('Should not create a new todo with invalid data', (done) => {
-
     request(app)
       .post('/todos')
       .send({})
