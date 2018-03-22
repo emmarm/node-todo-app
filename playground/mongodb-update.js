@@ -6,19 +6,19 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
   }
   console.log('Connected to MongoDB server.');
 
-  // db.collection('Todos').findOneAndUpdate(
-  //   { 
-  //     _id: new ObjectID('5ab236fd1bc0ec45cbdc6683') 
-  //   }, 
-  //   {
-  //     $set: {
-  //       completed: true
-  //     }
-  //   }, 
-  //   {
-  //     returnOriginal: false
-  //   }
-  // ).then((result) => console.log(result));
+  db.collection('Todos').findOneAndUpdate(
+    {
+      _id: new ObjectID('5ab236fd1bc0ec45cbdc6683')
+    },
+    {
+      $set: {
+        completed: true
+      }
+    },
+    {
+      returnOriginal: false
+    }
+  ).then((result) => console.log(result));
 
   db.collection('Users').findOneAndUpdate(
     {
