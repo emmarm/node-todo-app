@@ -21,6 +21,7 @@
     ],
     "arrow-parens": "off",
     "consistent-return": "warn",
-    "no-underscore-dangle": "warn"
+    "no-underscore-dangle": "warn",
+    "func-names": "off"
   }
 }
